@@ -1,0 +1,4 @@
+/home/endrebak/code/gwas/tests/test_data/VT_BO/config.yaml
+/home/endrebak/code/gwas/tests/test_data/saige_example/config.yaml
+/home/endrebak/code/gwas_configuration/VT_BO/config.yaml
+/home/endrebak/code/gwas_configuration/nonpart/config.yaml
