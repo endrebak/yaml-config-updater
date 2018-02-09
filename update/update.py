@@ -41,7 +41,7 @@ def required(r):
 
 def default(d):
 
-    if d != "None" and d:
+    if d != "None":
         return str(d)
     else:
         return ""
@@ -61,16 +61,18 @@ def example(e):
 
 def _update_config(existing_config, description_config):
 
-    print(existing_config)
     modify_config = deepcopy(description_config)
     for k, v in description_config.items():
+
         items = list(v.items())
+
         for k2, v2 in items:
 
-            if existing_config.get(k2, ""):
+            if existing_config.get(k2):
                 modify_config[k][k2]["default"] = existing_config[k2]
 
     return modify_config
+
 
 def update_config(configuration_file, description):
 

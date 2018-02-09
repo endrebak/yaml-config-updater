@@ -81,9 +81,55 @@ skip_model_fitting: False
 
     return str(f)
 
-def test_update_config(example_config, example_description):
 
-    result = update_config(example_config, example_description)
+@pytest.fixture
+def example_config_missing_value(tmpdir):
+
+    c = """# -----------
+# Saige Step1
+# -----------
+#
+# Path to pruned plink files. Path to plink file to be used for calculating
+# elements of the genetic relationship matrix (GRM).
+# (Required)
+plink_binary_prefix_pruned: tests/test_data/saige_example/duplicated
+
+# List of covariates to be centered around the mean.
+# (Not required)
+center_variables:
+
+# Column name for the sample IDs in the phenotype file e.g. 'IID'
+# (Not required)
+id_column: IID
+
+# integer (>0). Number of markers to be used for estimating the variance ratio.
+# (Not required)
+number_of_markers: 30
+
+# Whether to skip fitting the null model and only calculating the variance ratio
+# (Not required)
+skip_model_fitting:
+"""
+
+    f = tmpdir.mkdir("sub2").join("2")
+    f.write(c)
+
+    return str(f)
+
+
+# def test_update_config(example_config, example_description):
+
+#     result = update_config(example_config, example_description)
+
+#     print(result)
+
+#     assert 0
+
+
+
+def test_update_config_missing_value(example_config_missing_value, example_description):
+
+    result = update_config(example_config_missing_value, example_description)
 
     print(result)
 
