@@ -152,6 +152,26 @@ saige_step_2:
 
   description: "Params for finding sig SNPs in SAIGE"
 
+
+  min_minor_allele_count:
+    type: positive integer
+    description: Minimum minor allele count of markers to test.
+                 The higher threshold between minMAC and minMAF will be used
+    required: True
+    default: 1
+
+  min_minor_allele_frequency:
+    type: positive float
+    description: Minimum minor allele frequency of markers to test.
+          The higher threshold between minMAC and minMAF
+          will be used
+    required: True
+    default: 0.0
+
+saige2_dosage_settings:
+
+  description: "Information about the dosage files used by SAIGE. Only needed when using dosage files."
+
   samples_in_dosage:
     type: file
     description: Path to file that contains one column of
@@ -211,20 +231,15 @@ saige_step_2:
     required: False
     default: ALT
 
-  min_minor_allele_count:
-    type: positive integer
-    description: Minimum minor allele count of markers to test.
-                 The higher threshold between minMAC and minMAF will be used
-    required: True
-    default: 1
+saige2_vcf_settings:
 
-  min_minor_allele_frequency:
-    type: positive float
-    description: Minimum minor allele frequency of markers to test.
-          The higher threshold between minMAC and minMAF
-          will be used
-    required: True
-    default: 0.0
+  description: "Information about the VCF files used by SAIGE. Only needed when using VCF files."
+
+  vcf_field:
+    type: string
+    description: genotype field in vcf file to use. "DS" for dosages or "GT" for genotype
+    required: False
+    default: DS
 
 manhattan_plots:
   description: "Settings for Manhattan plots"
