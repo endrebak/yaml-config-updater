@@ -1,0 +1,14 @@
+/home/endrebak/code/chip_seq_pipeline/config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/Sarah/Barbara/config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/barbara/config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/epigenome_roadmap/H3K27me3_config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/epipp/H3K27me3_config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/epipp/H3K4me3_config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/epipp/PolII_config.yaml
+/home/endrebak/code/chip_seq_pipeline/private/epipp/config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/dna_repair/config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/downsampled/config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/integration/config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/keep_the_tips/config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/keep_the_tips/no_gencode_config.yaml
+/home/endrebak/code/chip_seq_pipeline/tests/test_data/paired_end/config.yaml
